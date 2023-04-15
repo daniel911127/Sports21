@@ -1,0 +1,422 @@
+body{
+  font-family: 'Iceland', cursive;
+  background-color: black;
+}
+/* estilos del header*/
+header{
+  display: flex;
+  position: absolut;
+  width: 100%;
+  height: 120px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 2px #0601FF;
+}
+
+.containerLogo img{
+  width: 100px;
+  height: 100px;
+}
+.containerMenu{
+  display: flex;
+  list-style-type: none;
+}
+.containerMenu li
+a{
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 30px;
+}
+.home{
+  color:#DA059E;
+}
+.productos{
+  color:#00C1FE;
+}
+.contactanos{
+  color:#FBF100;
+}
+.registrate{
+  color:#FEA800;
+}
+.containerUsuario{
+  display: flex;
+}
+.containerUsuario div a{
+  text-decoration: none;
+  margin-right: 15px;
+}
+.usuario{
+  color: white;
+}
+.carrito{
+  width: 20px;
+  height: 20px;
+}
+
+/*estilos Footer*/
+
+footer{
+  display: flex;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: solid 2px #0601FF;
+}
+footer p{
+  color:#726B6B;
+}
+footer a img{
+  width: 40px;
+  height: 40px;
+}
+
+/*contenido home*/
+
+.containerPropaganda{
+  display: flex;
+  height: 100%;
+  position: absolut;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.containerPropaganda div{
+  height: 50%;
+}
+.containerPropaganda div img{
+  margin-top: 30px;
+  height: 500px;
+}
+.tituloProductoMes{
+  color:#00C1FE;
+  position: absolute;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-left: 18px;
+  font-size: 40px;
+}
+.containerNovedades{
+  display: flex;
+  height: 100%;
+  position: absolut;
+  border-bottom: 30px;
+  
+}
+.containerNovedades div img{
+  margin-top: 30px;
+  height: 500px;
+  width: 500px;
+}
+.tituloNovedades{
+  color:#DA059E;
+  position: absolute;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-left: 18px;
+  font-size: 40px;
+}
+.productoMes img{
+  border-radius: 50px 0px 0px 50px;
+}
+.productoNovedades img{
+  border-radius: 0px 50px 50px 0px;
+}
+.containerMarcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.nike{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  background-color: #FBF100;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.nike img{
+  height: 80px;
+  width: 120px;
+  margin-left: 10px;
+}
+.adidas{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  background-color: #00C1FE;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.adidas img{
+  height: 95px;
+  width: 110px;
+  margin-left: 10px;
+}
+.puma{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  background-color: #DA059E;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.puma img{
+  height: 95px;
+  width: 110px;
+  margin-left: 10px;
+}
+.umbro{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  background-color: #FEA800;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.umbro img{
+  height: 95px;
+  width: 110px;
+  margin-left: 10px;
+}
+.underArmour{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  background-color: #00FD28;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.underArmour img{
+  height: 130px;
+  width: 130px;
+}
+
+/* estilo pagina productos*/
+
+.containerDeportes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.containerDeportes input{
+  margin: 20px;
+}
+.containerDeportes input:hover{
+  cursor: pointer;
+}
+.todos{
+  font-family: 'Iceland',cursive;
+  color: white;
+  background-color: black;
+  border: 1px solid #DA059E;
+  border-radius: 20px;
+}
+.futbol{
+  font-family: 'Iceland',cursive;
+  color: white;
+  background-color: black;
+  border: 1px solid #FEA800;
+  border-radius: 20px;
+}
+.boxeo{
+  font-family: 'Iceland',cursive;
+  color: white;
+  background-color: black;
+  border: 1px solid #00C1FE;
+  border-radius: 20px;
+}
+.tennis{
+  font-family: 'Iceland',cursive;
+  color: white;
+  background-color: black;
+  border: 1px solid #FBF100;
+  border-radius: 20px;
+}
+.beisbol{
+  font-family: 'Iceland',cursive;
+  color: white;
+  background-color: black;
+  border: 1px solid #00FD28;
+  border-radius: 20px;
+}
+
+.containerProductos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+.containerTarjeta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 270px;
+  width: 180px;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin: 20px;
+  background-color:RGB(114, 107, 107,0.5); 
+}
+.containerTarjeta img{
+  height:100%;
+  width: 180px;
+  object-fit: cover;
+}
+.detalle{
+  font-family: 'Iceland',cursive;
+  width: 50%;
+  margin-left:50px;
+  margin-bottom: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.detalle a{
+  text-decoration: none;
+  color: white;
+}
+
+/*pagina contactanos*/
+.containerContacto{
+  display: flex;
+  flex-direction: row;
+}
+.contacto{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contacto p{
+  color: white;
+  font-size: 30px;
+}
+form{
+  margin: 35px;
+}
+label{
+  font-size: 30px;
+  color: white;
+}
+input{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  height: 30px;
+  width: 200px;
+}
+.botonEnviar{
+  background-color: black;
+  border: 1px solid #DA059E;
+  color: #FEA800;
+}
+img {
+  width: 400px;
+  height: 300px;
+}
+
+/*pagina registro*/
+
+.containerRegistro{
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+}
+.containerRegistro input{
+  width: 300px;
+}
+.containerRegistro p{
+  color: white;
+}
+.containerTelYGen{
+  display: flex;
+  flex-direction: row;
+}
+.containerTelYGen input{
+  width:100px ;
+}
+.containerTelYGen div{
+  margin-right: 30px;
+  margin-left: 25px;
+}
+.ofertas{
+  display: flex;
+  flex-direction: center;
+}
+.ofertas input{
+  width: 40px;
+  margin-left: 20px;
+}
+.ofertas p{
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+/*pagina detaalle*/
+.containerProductosDetalle{
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.containerImagenDetalle{
+  width: 400px;
+  height: 500px;
+  border: 1px solid white;
+  border-radius:20px ;
+}
+.containerImagenDetalle img{
+  object-fit:cover;
+  margin-top: 30px ;
+}
+.containerDetalle{
+  width: 400px;
+  height: 500px;
+  border: 1px solid white;
+  border-radius:20px ;
+  
+}
+.containerDetalle p{
+  color: white;
+  font-size: 35px;
+  padding: 10px
+}
+.botonesDetalle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.btnComprar{
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  border: 1px solid #FEA800;
+  border-radius: 10px;
+}
+.btnVolver{
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  border: 1px solid #FBF100;
+  border-radius: 10px;
+}
+.btnComprar a{
+  text-decoration: none;
+  color: #DA059E;
+}
+.btnVolver a{
+  text-decoration: none;
+  color: #00C1FE;
+}
