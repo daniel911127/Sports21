@@ -60,6 +60,28 @@ a{
   width: 20px;
   height: 20px;
 }
+.inactive{
+  display: none;
+}
+.containerMenuMovil{
+  width: 180px; 
+  height: 200px;
+  border: 1px solid blue; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  position: absolute;
+  background-color: black;
+}
+.containerMenuMovil li{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.containerMenuMovil li
+a{
+  text-decoration: none;
+  font-size: 28px;
+}
 
 /*estilos Footer*/
 
@@ -536,6 +558,10 @@ img {
   .containerMenu{
     display: none;
   }
+  .inactive{
+    display: none;
+  }
+  
   .containerPropaganda{
     flex-direction: column;
     align-items: center;
@@ -544,7 +570,7 @@ img {
     flex-wrap: wrap;
   }
   .tituloProductoMes {
-    position: relative;
+    position: initial;
   }
   .tituloNovedades{
     position: relative;
