@@ -213,6 +213,7 @@ footer a img{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .containerDeportes input{
   margin: 20px;
@@ -500,6 +501,11 @@ img {
     width: 30px;
     height: 30px;
   }
+  /*pagina contactanos*/
+  img {
+    width: 300px;
+    height: 200px;
+  }
 }
 @media(max-width:660px){
   /*Home, Header y footer*/
@@ -542,5 +548,35 @@ img {
     width: 20px;
     height: 20px;
   }
-
+  /*Productos*/
+  .containerTarjeta{
+    height: 200px;
+    width: 130px;
+  }
+  .containerTarjeta img{
+    width: 120px;
+  }
+  .detalle{
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  /*pagina contactanos*/
+  .containerContacto{
+    margin-left: 50px;
+    flex-direction: column;
+  }
+  .contacto p{
+    font-size: 20px;
+  }
+  .imgContacto img {
+    display: none;
+  }
+  textarea{
+    width: 250px;
+  }
+  form{
+    margin: 0;
+  }
 }
