@@ -3,15 +3,21 @@ body{
   background-color: black;
 }
 /* estilos del header*/
-header{
+.header{
   display: flex;
-  position: absolut;
+  position: relative;
   width: 100%;
   height: 120px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-bottom: solid 2px #0601FF;
+}
+
+.menu{
+  width: 80px;
+  height: 80px;
+  display: none;
 }
 
 .containerLogo img{
@@ -25,7 +31,7 @@ header{
 .containerMenu li
 a{
   text-decoration: none;
-  margin-right: 25px;
+  margin-right: 20px;
   font-size: 30px;
 }
 .home{
@@ -61,8 +67,8 @@ footer{
   display: flex;
   position: relative;
   bottom: 0;
+  padding-top: 10px;
   width: 100%;
-  height: 80px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -419,4 +425,122 @@ img {
 .btnVolver a{
   text-decoration: none;
   color: #00C1FE;
+}
+/* media querys */
+@media(max-width:900px){ 
+  /*Home, Header y footer*/
+  .containerLogo img{
+    width: 80px;
+    height: 80px;
+  }
+  .headerDesktop{
+    height: 90px;
+    margin-bottom: 40px;
+  }
+  .containerMenu li a{
+    font-size: 20px;
+  }
+  .containerPropaganda{
+    margin-bottom: 50px;
+  }
+  .containerPropaganda div img {
+    height: 300px;
+    width: 300px;
+  }
+  .containerPropaganda div p {
+    font-size: 30px;
+  }
+  .nike {
+      width: 100px;
+      height: 80px;
+  }
+  .nike img{
+    height: 45px;
+    width: 80px;
+  }
+  .adidas{
+    width: 100px;
+    height: 80px;
+  }
+  .adidas img{
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .puma{
+    width: 100px;
+    height: 80px;
+  }
+  .puma img{
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .umbro{
+    width: 100px;
+    height: 80px;
+  }
+  .umbro img{
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .underArmour{
+    width: 100px;
+    height: 80px;
+  }
+  .underArmour img{
+    height: 100px;
+    width: 100px;
+  }
+  footer p{
+    font-size: 10px;
+  }
+  footer a img{
+    width: 30px;
+    height: 30px;
+  }
+}
+@media(max-width:660px){
+  /*Home, Header y footer*/
+  .header{
+    height: 100px;
+    flex-direction: row;
+    justify-content:space-around;
+    border-bottom: solid 2px #0601FF;
+  }
+  .menu{
+    display: block;
+    margin-left: 30px;
+  }
+  .containerMenu{
+    display: none;
+  }
+  .containerPropaganda{
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerMarcas{
+    flex-wrap: wrap;
+  }
+  .tituloProductoMes {
+    position: relative;
+  }
+  .tituloNovedades{
+    position: relative;
+  }
+  .productoMes img{
+    border-radius: 50px;
+  }
+  .productoNovedades img{
+    border-radius: 50px;
+  }
+  footer p{
+    font-size: 7px;
+  }
+  footer a img{
+    width: 20px;
+    height: 20px;
+  }
+
 }
