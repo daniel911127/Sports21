@@ -1,91 +1,107 @@
-body{
-  font-family: 'Iceland', cursive;
+@charset "UTF-8";
+/* paleta de colores*/
+/* tamaño de fuentes e iconos*/
+/* resoluciones de pantalla*/
+/*Separaciones(margenes y paddings)*/
+/*fuente*/
+/*mixings*/
+body {
+  font-family: "Iceland", cursive;
   background-color: black;
 }
-/* estilos del header*/
-.header{
+
+/* header */
+.header {
   display: flex;
-  position: relative;
-  width: 100%;
-  height: 120px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 120px;
   border-bottom: solid 2px #0601FF;
 }
-
-.menu{
+.header .menu {
   width: 80px;
   height: 80px;
   display: none;
+  position: relative;
 }
-
-.containerLogo img{
+.header .containerLogo img {
   width: 100px;
   height: 100px;
 }
-.containerMenu{
+.header .containerMenu {
   display: flex;
   list-style-type: none;
 }
-.containerMenu li
-a{
+.header .containerMenu li a {
   text-decoration: none;
   margin-right: 20px;
   font-size: 30px;
 }
-.home{
-  color:#DA059E;
+.header .containerMenu .home {
+  color: #DA059E;
 }
-.productos{
-  color:#00C1FE;
+.header .containerMenu .productos {
+  color: #00C1FE;
 }
-.contactanos{
-  color:#FBF100;
+.header .containerMenu .contactanos {
+  color: #FBF100;
 }
-.registrate{
-  color:#FEA800;
+.header .containerMenu .registrate {
+  color: #FEA800;
 }
-.containerUsuario{
+.header .containerUsuario {
   display: flex;
 }
-.containerUsuario div a{
+.header .containerUsuario div a {
   text-decoration: none;
   margin-right: 15px;
 }
-.usuario{
+.header .containerUsuario .usuario {
   color: white;
 }
-.carrito{
+.header .containerUsuario .carrito {
   width: 20px;
   height: 20px;
 }
-.inactive{
+
+.inactive {
   display: none;
 }
-.containerMenuMovil{
-  width: 180px; 
+
+.containerMenuMovil {
+  width: 180px;
   height: 200px;
-  border: 1px solid blue; 
+  border: 1px solid #0601FF;
   display: flex;
   flex-direction: column;
   margin-top: 0px;
-  position: absolute;
   background-color: black;
 }
-.containerMenuMovil li{
+.containerMenuMovil i {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.containerMenuMovil li
-a{
+.containerMenuMovil a {
   text-decoration: none;
   font-size: 28px;
 }
+.containerMenuMovil a .home {
+  color: #DA059E;
+}
+.containerMenuMovil a .productos {
+  color: #00C1FE;
+}
+.containerMenuMovil a .contactanos {
+  color: #FBF100;
+}
+.containerMenuMovil a .registrate {
+  color: #FEA800;
+}
 
-/*estilos Footer*/
-
-footer{
+/*footer*/
+footer {
   display: flex;
   position: relative;
   bottom: 0;
@@ -96,70 +112,110 @@ footer{
   align-items: center;
   border-top: solid 2px #0601FF;
 }
-footer p{
-  color:#726B6B;
+footer p {
+  color: #726B6B;
 }
-footer a img{
+footer a img {
   width: 40px;
   height: 40px;
 }
 
-/*contenido home*/
-
-.containerPropaganda{
+/* media querys*/
+@media (max-width: 900px) {
+  .header .containerLogo img {
+    width: 80px;
+    height: 80px;
+  }
+  .header .containerMenu li a {
+    font-size: 20px;
+  }
+  footer p {
+    font-size: 10px;
+  }
+  footer a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 660px) {
+  .header {
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 2px #0601FF;
+  }
+  .header .menu {
+    display: block;
+    margin-left: 30px;
+  }
+  .header .containerMenu {
+    display: none;
+  }
+  .header .inactive {
+    display: none;
+  }
+  footer p {
+    font-size: 7px;
+  }
+  footer a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.containerPropaganda {
   display: flex;
   height: 100%;
   position: absolut;
   justify-content: center;
   margin-bottom: 30px;
 }
-.containerPropaganda div{
+.containerPropaganda div {
   height: 50%;
 }
-.containerPropaganda div img{
+.containerPropaganda div img {
   margin-top: 30px;
   height: 500px;
 }
-.tituloProductoMes{
-  color:#00C1FE;
+.containerPropaganda .tituloProductoMes {
+  color: #00C1FE;
   position: absolute;
   font-weight: bold;
   margin-top: 35px;
   margin-left: 18px;
   font-size: 40px;
 }
-.containerNovedades{
+.containerPropaganda .productoMes img {
+  border-radius: 50px 0px 0px 50px;
+}
+.containerPropaganda .containerNovedades {
   display: flex;
   height: 100%;
   position: absolut;
   border-bottom: 30px;
-  
 }
-.containerNovedades div img{
+.containerPropaganda .containerNovedades div img {
   margin-top: 30px;
   height: 500px;
   width: 500px;
 }
-.tituloNovedades{
-  color:#DA059E;
+.containerPropaganda .tituloNovedades {
+  color: #DA059E;
   position: absolute;
   font-weight: bold;
   margin-top: 35px;
-  margin-left: 18px;
+  margin-right: 18px;
   font-size: 40px;
 }
-.productoMes img{
-  border-radius: 50px 0px 0px 50px;
-}
-.productoNovedades img{
+.containerPropaganda .productoNovedades img {
   border-radius: 0px 50px 50px 0px;
 }
+
 .containerMarcas {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.nike{
+.containerMarcas .nike {
   display: flex;
   align-items: center;
   width: 130px;
@@ -168,12 +224,12 @@ footer a img{
   margin-bottom: 30px;
   border-radius: 30px;
 }
-.nike img{
+.containerMarcas .nike img {
   height: 80px;
   width: 120px;
   margin-left: 10px;
 }
-.adidas{
+.containerMarcas .adidas {
   display: flex;
   align-items: center;
   width: 130px;
@@ -182,12 +238,12 @@ footer a img{
   margin-bottom: 30px;
   border-radius: 30px;
 }
-.adidas img{
+.containerMarcas .adidas img {
   height: 95px;
   width: 110px;
   margin-left: 10px;
 }
-.puma{
+.containerMarcas .puma {
   display: flex;
   align-items: center;
   width: 130px;
@@ -196,12 +252,12 @@ footer a img{
   margin-bottom: 30px;
   border-radius: 30px;
 }
-.puma img{
+.containerMarcas .puma img {
   height: 95px;
   width: 110px;
   margin-left: 10px;
 }
-.umbro{
+.containerMarcas .umbro {
   display: flex;
   align-items: center;
   width: 130px;
@@ -210,12 +266,12 @@ footer a img{
   margin-bottom: 30px;
   border-radius: 30px;
 }
-.umbro img{
+.containerMarcas .umbro img {
   height: 95px;
   width: 110px;
   margin-left: 10px;
 }
-.underArmour{
+.containerMarcas .underArmour {
   display: flex;
   align-items: center;
   width: 130px;
@@ -224,69 +280,128 @@ footer a img{
   margin-bottom: 30px;
   border-radius: 30px;
 }
-.underArmour img{
+.containerMarcas .underArmour img {
   height: 130px;
   width: 130px;
 }
 
-/* estilo pagina productos*/
-
-.containerDeportes{
+@media (max-width: 900px) {
+  .containerPropaganda {
+    margin-bottom: 50px;
+  }
+  .containerPropaganda div img {
+    height: 300px;
+    width: 300px;
+  }
+  .containerPropaganda .tituloNovedades, .containerPropaganda .tituloProductoMes {
+    font-size: 30px;
+  }
+  .containerMarcas .nike {
+    width: 100px;
+    height: 80px;
+  }
+  .containerMarcas .nike img {
+    height: 45px;
+    width: 80px;
+  }
+  .containerMarcas .adidas {
+    width: 100px;
+    height: 80px;
+  }
+  .containerMarcas .adidas img {
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .containerMarcas .puma {
+    width: 100px;
+    height: 80px;
+  }
+  .containerMarcas .puma img {
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .containerMarcas .umbro {
+    width: 100px;
+    height: 80px;
+  }
+  .containerMarcas .umbro img {
+    height: 70px;
+    width: 80px;
+    margin-left: 8px;
+  }
+  .containerMarcas .underArmour {
+    width: 100px;
+    height: 80px;
+  }
+  .containerMarcas .underArmour img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (max-width: 660px) {
+  .containerPropaganda {
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerPropaganda .tituloProductoMes {
+    position: initial;
+  }
+  .containerPropaganda .tituloNovedades {
+    position: relative;
+  }
+  .containerPropaganda .productoMes img {
+    border-radius: 50px;
+  }
+  .containerPropaganda .productoNovedades img {
+    border-radius: 50px;
+  }
+  .containerMarcas {
+    flex-wrap: wrap;
+  }
+}
+.containerDeportes {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.containerDeportes input{
+.containerDeportes input {
   margin: 20px;
+  width: 60px;
+  font-family: "Iceland", cursive;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
 }
-.containerDeportes input:hover{
+.containerDeportes input:hover {
   cursor: pointer;
 }
-.todos{
-  font-family: 'Iceland',cursive;
-  color: white;
-  background-color: black;
+.containerDeportes .todos {
   border: 1px solid #DA059E;
-  border-radius: 20px;
 }
-.futbol{
-  font-family: 'Iceland',cursive;
-  color: white;
-  background-color: black;
+.containerDeportes .futbol {
   border: 1px solid #FEA800;
-  border-radius: 20px;
 }
-.boxeo{
-  font-family: 'Iceland',cursive;
-  color: white;
-  background-color: black;
+.containerDeportes .boxeo {
   border: 1px solid #00C1FE;
-  border-radius: 20px;
 }
-.tennis{
-  font-family: 'Iceland',cursive;
-  color: white;
-  background-color: black;
+.containerDeportes .tennis {
   border: 1px solid #FBF100;
-  border-radius: 20px;
 }
-.beisbol{
-  font-family: 'Iceland',cursive;
-  color: white;
-  background-color: black;
+.containerDeportes .beisbol {
   border: 1px solid #00FD28;
-  border-radius: 20px;
 }
 
-.containerProductos{
+.containerProductos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
 }
-.containerTarjeta{
+.containerProductos .containerTarjeta {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,17 +410,17 @@ footer a img{
   border: 1px solid white;
   border-radius: 25px;
   margin: 20px;
-  background-color:RGB(114, 107, 107,0.5); 
+  background-color: RGB(114, 107, 107, 0.5);
 }
-.containerTarjeta img{
-  height:100%;
+.containerProductos .containerTarjeta img {
+  height: 100%;
   width: 180px;
   object-fit: cover;
 }
-.detalle{
-  font-family: 'Iceland',cursive;
+.containerProductos .containerTarjeta .detalle {
+  font-family: "Iceland", cursive;
   width: 50%;
-  margin-left:50px;
+  margin-left: 50px;
   margin-bottom: 30px;
   background-color: black;
   color: white;
@@ -313,332 +428,231 @@ footer a img{
   font-size: 25px;
   border-radius: 10px;
 }
-.detalle a{
+.containerProductos .containerTarjeta .detalle a {
   text-decoration: none;
   color: white;
 }
 
-/*pagina contactanos*/
-.containerContacto{
+@media (max-width: 660px) {
+  .containerProductos .containerTarjeta {
+    height: 200px;
+    width: 130px;
+  }
+  .containerProductos .containerTarjeta img {
+    width: 120px;
+  }
+  .containerProductos .containerTarjeta .detalle {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+}
+.containerContacto {
   display: flex;
   flex-direction: row;
 }
-.contacto{
+.containerContacto .contacto {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-.contacto p{
+.containerContacto .contacto p {
   color: white;
   font-size: 30px;
 }
-form{
+.containerContacto .contacto form {
   margin: 35px;
 }
-label{
+.containerContacto .contacto form label {
   font-size: 30px;
   color: white;
 }
-input{
+.containerContacto .contacto form input {
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
   height: 30px;
   width: 200px;
 }
-.botonEnviar{
+.containerContacto .contacto form .botonEnviar {
   background-color: black;
   border: 1px solid #DA059E;
   color: #FEA800;
 }
-img {
+.containerContacto .imgContacto img {
   width: 400px;
   height: 300px;
 }
 
-/*pagina registro*/
-
-.containerRegistro{
-  display: flex;
-  flex-direction: column;
-  align-items:  center;
+@media (max-width: 900px) {
+  .containerContacto .imgContacto img {
+    width: 300px;
+    height: 200px;
+  }
 }
-.containerRegistro input{
-  width: 300px;
+@media (max-width: 660px) {
+  .containerContacto {
+    margin-left: 50px;
+    flex-direction: column;
+  }
+  .containerContacto .contacto p {
+    font-size: 20px;
+  }
+  .containerContacto .contacto form {
+    margin: 0;
+  }
+  .containerContacto .contacto form textarea {
+    width: 250px;
+  }
+  .containerContacto .imgContacto img {
+    display: none;
+  }
 }
-.containerRegistro p{
-  color: white;
-}
-.containerTelYGen{
-  display: flex;
-  flex-direction: row;
-}
-.containerTelYGen input{
-  width:100px ;
-}
-.containerTelYGen div{
-  margin-right: 30px;
-  margin-left: 25px;
-}
-.ofertas{
-  display: flex;
-  flex-direction: center;
-}
-.ofertas input{
-  width: 40px;
-  margin-left: 20px;
-}
-.ofertas p{
-  margin-top: 25px;
-  margin-left: 10px;
-}
-
-/*pagina detaalle*/
-.containerProductosDetalle{
+.containerProductosDetalle {
   margin: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.containerImagenDetalle{
+.containerProductosDetalle .containerImagenDetalle {
   width: 400px;
   height: 500px;
   border: 1px solid white;
-  border-radius:20px ;
+  border-radius: 20px;
 }
-.containerImagenDetalle img{
-  object-fit:cover;
-  margin-top: 30px ;
+.containerProductosDetalle .containerImagenDetalle img {
+  object-fit: cover;
+  width: 400px;
 }
-.containerDetalle{
+.containerProductosDetalle .containerDetalle {
   width: 400px;
   height: 500px;
   border: 1px solid white;
-  border-radius:20px ;
-  
+  border-radius: 20px;
 }
-.containerDetalle p{
+.containerProductosDetalle .containerDetalle p {
   color: white;
   font-size: 35px;
-  padding: 10px
+  padding: 10px;
 }
-.botonesDetalle{
+.containerProductosDetalle .containerDetalle .botonesDetalle {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.btnComprar{
+.containerProductosDetalle .containerDetalle .botonesDetalle .btnComprar {
   width: 100px;
   height: 40px;
   background-color: black;
   border: 1px solid #FEA800;
   border-radius: 10px;
 }
-.btnVolver{
+.containerProductosDetalle .containerDetalle .botonesDetalle .btnComprar a {
+  text-decoration: none;
+  color: #DA059E;
+}
+.containerProductosDetalle .containerDetalle .botonesDetalle .btnVolver {
   width: 100px;
   height: 40px;
   background-color: black;
   border: 1px solid #FBF100;
   border-radius: 10px;
 }
-.btnComprar a{
-  text-decoration: none;
-  color: #DA059E;
-}
-.btnVolver a{
+.containerProductosDetalle .containerDetalle .botonesDetalle .btnVolver a {
   text-decoration: none;
   color: #00C1FE;
 }
-/* media querys */
-@media(max-width:900px){ 
-  /*Home, Header y footer*/
-  .containerLogo img{
-    width: 80px;
-    height: 80px;
-  }
-  .headerDesktop{
-    height: 90px;
-    margin-bottom: 40px;
-  }
-  .containerMenu li a{
-    font-size: 20px;
-  }
-  .containerPropaganda{
-    margin-bottom: 50px;
-  }
-  .containerPropaganda div img {
-    height: 300px;
-    width: 300px;
-  }
-  .containerPropaganda div p {
-    font-size: 30px;
-  }
-  .nike {
-      width: 100px;
-      height: 80px;
-  }
-  .nike img{
-    height: 45px;
-    width: 80px;
-  }
-  .adidas{
-    width: 100px;
-    height: 80px;
-  }
-  .adidas img{
-    height: 70px;
-    width: 80px;
-    margin-left: 8px;
-  }
-  .puma{
-    width: 100px;
-    height: 80px;
-  }
-  .puma img{
-    height: 70px;
-    width: 80px;
-    margin-left: 8px;
-  }
-  .umbro{
-    width: 100px;
-    height: 80px;
-  }
-  .umbro img{
-    height: 70px;
-    width: 80px;
-    margin-left: 8px;
-  }
-  .underArmour{
-    width: 100px;
-    height: 80px;
-  }
-  .underArmour img{
-    height: 100px;
-    width: 100px;
-  }
-  footer p{
-    font-size: 10px;
-  }
-  footer a img{
-    width: 30px;
-    height: 30px;
-  }
-  /*pagina contactanos*/
-  img {
-    width: 300px;
-    height: 200px;
-  }
-  /*pagina detalle*/
-  .containerImagenDetalle{
-    width: 300px;
-    height: 400px;
-    margin-right: 10px;
-  }
-  .containerDetalle{
+
+@media (max-width: 900px) {
+  .containerProductosDetalle .containerImagenDetalle {
     width: 300px;
     height: 400px;
   }
-  .containerDetalle p {
+  .containerProductosDetalle .containerImagenDetalle img {
+    width: 300px;
+  }
+  .containerProductosDetalle .containerDetalle {
+    width: 300px;
+    height: 400px;
+  }
+  .containerProductosDetalle .containerDetalle p {
     font-size: 25px;
-    margin: 10px; 
+    margin: 10px;
   }
 }
-@media(max-width:660px){
-  /*Home, Header y footer*/
-  .header{
-    height: 100px;
-    flex-direction: row;
-    justify-content:space-around;
-    border-bottom: solid 2px #0601FF;
-  }
-  .menu{
-    display: block;
-    margin-left: 30px;
-  }
-  .containerMenu{
-    display: none;
-  }
-  .inactive{
-    display: none;
-  }
-  
-  .containerPropaganda{
+@media (max-width: 660px) {
+  .containerProductosDetalle {
     flex-direction: column;
     align-items: center;
   }
-  .containerMarcas{
-    flex-wrap: wrap;
-  }
-  .tituloProductoMes {
-    position: initial;
-  }
-  .tituloNovedades{
-    position: relative;
-  }
-  .productoMes img{
-    border-radius: 50px;
-  }
-  .productoNovedades img{
-    border-radius: 50px;
-  }
-  footer p{
-    font-size: 7px;
-  }
-  footer a img{
-    width: 20px;
-    height: 20px;
-  }
-  /*Productos*/
-  .containerTarjeta{
-    height: 200px;
-    width: 130px;
-  }
-  .containerTarjeta img{
-    width: 120px;
-  }
-  .detalle{
-    font-size: 18px;
-    margin-left: 30px;
-    margin-bottom: 0;
-    margin-top: 10px;
-  }
-  /*pagina contactanos*/
-  .containerContacto{
-    margin-left: 50px;
-    flex-direction: column;
-  }
-  .contacto p{
-    font-size: 20px;
-  }
-  .imgContacto img {
-    display: none;
-  }
-  textarea{
-    width: 250px;
-  }
-  form{
-    margin: 0;
-  }
-  /*detalle*/
-  .containerProductosDetalle{
-    flex-direction: column;
-    align-items: center;
-  }
-  .containerImagenDetalle{
-    width: 350px;
+  .containerProductosDetalle .containerImagenDetalle {
     height: 250px;
     margin-bottom: 10px;
     margin-left: 10px;
   }
-  .containerImagenDetalle img {
-    margin-left: 40px;
+  .containerProductosDetalle .containerImagenDetalle img {
+    margin-left: 30px;
+    width: 230px;
   }
-  .containerDetalle{
-    width: 350px;
-    height: 250px;
+  .containerDetalle {
+    margin-left: 10px;
   }
   .containerDetalle p {
     font-size: 20px;
-    margin: 10px; 
+    margin: 10px;
   }
 }
+.containerRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerRegistro input {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  height: 30px;
+}
+.containerRegistro p {
+  color: white;
+}
+.containerRegistro form {
+  width: 350px;
+  margin: 35px;
+}
+.containerRegistro form .botonEnviar {
+  background-color: black;
+  border: 1px solid #DA059E;
+  color: #FEA800;
+}
+.containerRegistro form label {
+  font-size: 30px;
+  color: white;
+}
+.containerRegistro .containerTelYGen {
+  display: flex;
+  flex-direction: row;
+}
+.containerRegistro .containerTelYGen div {
+  margin-right: 30px;
+  margin-left: 25px;
+}
+.containerRegistro .containerTelYGen div input {
+  width: 100px;
+}
+.containerRegistro .ofertas {
+  display: flex;
+  justify-content: center;
+}
+.containerRegistro .ofertas input {
+  width: 50px;
+  margin-left: -30px;
+}
+.containerRegistro .ofertas p {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

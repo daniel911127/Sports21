@@ -1,0 +1,71 @@
+.containerContacto{
+  display: flex;
+  flex-direction: row;
+  .contacto{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    p{
+      color: $color-blanco;
+      font-size: 30px;
+    }
+    form{
+      margin: 35px;
+      label{
+        font-size: 30px;
+        color: $color-blanco;
+      }
+      input{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        height: 30px;
+        width: 200px;
+      }
+      .botonEnviar{
+        background-color: $color-primario;
+        border: 1px solid $color-rosado;
+        color: $color-naranja;
+      }
+    }
+  }
+  .imgContacto{
+    img {
+      width: 400px;
+      height: 300px;
+    }    
+  }
+}
+@media(max-width:$tablet){
+  .containerContacto{
+    .imgContacto{
+      img {
+        width: 300px;
+        height: 200px;
+      }    
+    }
+  }
+}
+@media(max-width:$movil){
+  .containerContacto{
+    margin-left: 50px;
+    flex-direction: column;
+    .contacto{ 
+      p{
+      font-size: 20px;
+      }
+      form{
+        margin: 0;  
+        textarea{
+          width: 250px;
+        }
+      }
+    }
+    .imgContacto{
+      img {
+        display: none;
+      }    
+    }
+  }
+}
+

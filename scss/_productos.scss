@@ -1,0 +1,77 @@
+.containerDeportes{
+  @include flex-container-productos;
+  input{
+    margin: 20px;
+    width: 60px;
+    @include botones-filtros
+  }
+  input:hover{
+    cursor: pointer;
+  }
+  .todos{
+    border: 1px solid $color-rosado;
+  }
+  .futbol{
+    border: 1px solid $color-naranja;
+  }
+  .boxeo{
+    border: 1px solid $color-azulClaro;
+  }
+  .tennis{
+    border: 1px solid $color-amarillo;
+  }
+  .beisbol{
+    border: 1px solid $color-verde;
+  }
+}
+.containerProductos{
+  @include flex-container-productos;
+  margin: 20px;
+  .containerTarjeta{
+    @include flex-container-tarjeta;
+    height: 270px;
+    width: 180px;
+    border: 1px solid $color-blanco;
+    border-radius: 25px;
+    margin: 20px;
+    background-color:RGB(114, 107, 107,0.5); 
+    img{
+      height:100%;
+      width: 180px;
+      object-fit: cover;
+    }
+    .detalle{
+      font-family: $fuente-principal;
+      width: 50%;
+      margin-left:50px;
+      margin-bottom: 30px;
+      background-color: $color-primario;
+      color: $color-blanco;
+      border: 1px solid $color-blanco;
+      font-size: 25px;
+      border-radius: 10px;
+      a{
+        text-decoration: none;
+        color: $color-blanco;
+      }
+    }
+  }
+}
+@media(max-width:$movil){
+  .containerProductos{
+    .containerTarjeta{
+      height: 200px;
+      width: 130px;
+      img{
+        width: 120px;
+      }  
+      .detalle{
+        font-size: 18px;
+        margin-left: 30px;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }  
+    }
+  }
+}
+
