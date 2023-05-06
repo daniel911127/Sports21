@@ -1,0 +1,50 @@
+/* paleta de colores*/
+$color-primario:black;
+$color-rosado:#DA059E;
+$color-azulClaro:#00C1FE;
+$color-amarillo:#FBF100;
+$color-naranja:#FEA800;
+$color-verde:#00FD28;
+$borde-azulOscuro:#0601FF;
+$color-footer:#726B6B;
+$color-blanco:white;
+
+/* tamaño de fuentes e iconos*/
+$fuente-grande:30px;
+$fuente-media:20px;
+$logo:100px;
+
+/* resoluciones de pantalla*/
+$tablet:900px;
+$movil:660px;
+
+/*Separaciones(margenes y paddings)*/
+
+/*fuente*/
+$fuente-principal:'Iceland', cursive;
+
+/*mixings*/
+@mixin flex-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-container-productos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@mixin flex-container-tarjeta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin botones-filtros{
+  font-family: $fuente-principal;
+  background-color: $color-primario;
+  color: $color-blanco;
+  border-radius: 20px;
+}
+

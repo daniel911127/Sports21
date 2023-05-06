@@ -1,0 +1,206 @@
+.containerPropaganda{
+  display: flex;
+  height: 100%;
+  position: absolut;
+  justify-content: center;
+  margin-bottom: 30px;
+  div{
+    height: 50%;
+    img{
+      margin-top: 30px;
+      height: 500px;
+    }    
+  }
+  .tituloProductoMes{
+    color:$color-azulClaro;
+    position: absolute;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-left: 18px;
+    font-size: 40px;
+  }
+  .productoMes{
+    img{
+      border-radius: 50px 0px 0px 50px;
+    }
+  }
+  .containerNovedades{
+    display: flex;
+    height: 100%;
+    position: absolut;
+    border-bottom: 30px;
+    div {
+      img{
+      margin-top: 30px;
+      height: 500px;
+      width: 500px;
+      }  
+    }
+  }
+  .tituloNovedades{
+    color:$color-rosado;
+    position: absolute;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-right: 18px;
+    font-size: 40px;
+  }
+  .productoNovedades img{
+    border-radius: 0px 50px 50px 0px;
+  }
+}
+.containerMarcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .nike{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    background-color: $color-amarillo;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    img{
+      height: 80px;
+      width: 120px;
+      margin-left: 10px;
+    }
+  }
+  .adidas{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    background-color: $color-azulClaro;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    img{
+      height: 95px;
+      width: 110px;
+      margin-left: 10px;
+    }
+  }
+  .puma{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    background-color: $color-rosado;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    img{
+      height: 95px;
+      width: 110px;
+      margin-left: 10px;
+    }
+  }
+  .umbro{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    background-color: $color-naranja;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    img{
+      height: 95px;
+      width: 110px;
+      margin-left: 10px;
+    }
+  }
+  .underArmour{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    background-color: $color-verde;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    img{
+      height: 130px;
+      width: 130px;
+    }
+  } 
+}
+@media(max-width:$tablet){
+  .containerPropaganda{
+    margin-bottom: 50px;
+    div{
+      img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    .tituloNovedades,.tituloProductoMes{
+      font-size: 30px;
+    }
+  }
+  .containerMarcas{
+    .nike {
+      width: 100px;
+      height: 80px;
+      img{
+        height: 45px;
+        width: 80px;
+      }
+    }
+    .adidas{
+    width: 100px;
+    height: 80px;
+      img{
+      height: 70px;
+      width: 80px;
+      margin-left: 8px;
+      }
+    }
+    .puma{
+    width: 100px;
+    height: 80px;
+    img{
+      height: 70px;
+      width: 80px;
+      margin-left: 8px;
+    }
+  }
+  .umbro{
+    width: 100px;
+    height: 80px;
+    img{
+      height: 70px;
+      width: 80px;
+      margin-left: 8px;
+    }
+  }
+  .underArmour{
+    width: 100px;
+    height: 80px;
+    img{
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+}
+@media(max-width:$movil){
+  .containerPropaganda{
+    flex-direction: column;
+    align-items: center;
+    .tituloProductoMes {
+      position: initial;
+    }
+    .tituloNovedades{
+      position: relative;
+    }
+    .productoMes img{
+      border-radius: 50px;
+    }
+    .productoNovedades img{
+      border-radius: 50px;
+    }
+  }
+  .containerMarcas{
+    flex-wrap: wrap;
+  }
+}
+
