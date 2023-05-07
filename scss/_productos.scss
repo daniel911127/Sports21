@@ -3,10 +3,14 @@
   input{
     margin: 20px;
     width: 60px;
-    @include botones-filtros
+    @include botones-filtros;
+    transition:all 1s;
   }
   input:hover{
     cursor: pointer;
+    color: $color-primario;
+    border: $color-primario;
+    background-image:linear-gradient(to left,$color-azulClaro,$color-verde) ;
   }
   .todos{
     border: 1px solid $color-rosado;
@@ -39,6 +43,10 @@
       height:100%;
       width: 180px;
       object-fit: cover;
+      transition: all 1s;
+      &:hover{
+        transform: scale(1.1,1.1);
+      }
     }
     .detalle{
       font-family: $fuente-principal;

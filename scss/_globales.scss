@@ -19,14 +19,25 @@ body{
       width: 100px;
       height: 100px;
     }
+    &:hover{
+      transform: rotate(15deg);
+    }
   }
   .containerMenu{
     display: flex;
     list-style-type: none;
-    li a{
+    transition: all 2s;
+    li:hover{
+      transform: scale(0.8,0.8);
+    }
+    li 
+    a{
       text-decoration: none;
       margin-right: 20px;
       font-size: 30px;
+      &:hover{
+        color: $color-blanco;
+      }
     }
     .home{
       color:$color-rosado;
@@ -53,6 +64,9 @@ body{
     .carrito{
       width: 20px;
       height: 20px;
+      &:hover{
+        rotate:(-15deg);
+      }
     }
   }
 }
@@ -61,7 +75,7 @@ body{
 }
 .containerMenuMovil{
   width: 180px; 
-  height: 200px;
+  height: 130px;
   border: 1px solid $borde-azulOscuro; 
   display: flex;
   flex-direction: column;
@@ -74,6 +88,7 @@ body{
   a{
     text-decoration: none;
     font-size: 28px;
+  }
     .home{
       color:$color-rosado;
     }
@@ -86,7 +101,6 @@ body{
     .registrate{
       color:$color-naranja;
     }
-  }
 }
 
 /*footer*/
