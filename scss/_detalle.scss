@@ -8,9 +8,21 @@
     height: 500px;
     border: 1px solid $color-blanco;
     border-radius:20px ;
+    animation:rotacion 3s;
     img{
       object-fit:cover;
       width: 400px;
+    }
+  }
+  @keyframes rotacion { 
+    0%{
+      transform:scale(1) rotateZ(0)
+    }
+    50%{
+      transform:scale(.5) rotateZ(180deg)
+    }
+    100%{
+      transform:scale(1) rotateZ(360deg)
     }
   }
   .containerDetalle{
@@ -33,9 +45,29 @@
         background-color: $color-primario;
         border: 1px solid $color-naranja;
         border-radius: 10px;
+        animation: vibrar 4s ;
         a{
           text-decoration: none;
           color: $color-rosado;
+        }
+      }
+      @keyframes vibrar {
+        0%{
+          transform:translate(0)
+        }
+        20%{
+          transform:translate(-2px,2px)
+        }
+        40%{
+          transform:translate(-2px,-2px)
+        }
+        60%{
+          transform:translate(2px,2px)
+        }
+        80%{
+          transform:translate(2px,-2px)
+        }100%{
+          transform:translate(0)
         }
       }
       .btnVolver{
@@ -93,3 +125,5 @@
     }
   }
 }
+
+

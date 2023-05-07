@@ -30,14 +30,24 @@ body {
   width: 100px;
   height: 100px;
 }
+.header .containerLogo:hover {
+  transform: rotate(15deg);
+}
 .header .containerMenu {
   display: flex;
   list-style-type: none;
+  transition: all 2s;
+}
+.header .containerMenu li:hover {
+  transform: scale(0.8, 0.8);
 }
 .header .containerMenu li a {
   text-decoration: none;
   margin-right: 20px;
   font-size: 30px;
+}
+.header .containerMenu li a:hover {
+  color: white;
 }
 .header .containerMenu .home {
   color: #DA059E;
@@ -65,6 +75,9 @@ body {
   width: 20px;
   height: 20px;
 }
+.header .containerUsuario .carrito:hover {
+  rotate: -15deg;
+}
 
 .inactive {
   display: none;
@@ -72,7 +85,7 @@ body {
 
 .containerMenuMovil {
   width: 180px;
-  height: 200px;
+  height: 130px;
   border: 1px solid #0601FF;
   display: flex;
   flex-direction: column;
@@ -87,16 +100,16 @@ body {
   text-decoration: none;
   font-size: 28px;
 }
-.containerMenuMovil a .home {
+.containerMenuMovil .home {
   color: #DA059E;
 }
-.containerMenuMovil a .productos {
+.containerMenuMovil .productos {
   color: #00C1FE;
 }
-.containerMenuMovil a .contactanos {
+.containerMenuMovil .contactanos {
   color: #FBF100;
 }
-.containerMenuMovil a .registrate {
+.containerMenuMovil .registrate {
   color: #FEA800;
 }
 
@@ -374,9 +387,13 @@ footer a img {
   background-color: black;
   color: white;
   border-radius: 20px;
+  transition: all 1s;
 }
 .containerDeportes input:hover {
   cursor: pointer;
+  color: black;
+  border: black;
+  background-image: linear-gradient(to left, #00C1FE, #00FD28);
 }
 .containerDeportes .todos {
   border: 1px solid #DA059E;
@@ -416,6 +433,10 @@ footer a img {
   height: 100%;
   width: 180px;
   object-fit: cover;
+  transition: all 1s;
+}
+.containerProductos .containerTarjeta img:hover {
+  transform: scale(1.1, 1.1);
 }
 .containerProductos .containerTarjeta .detalle {
   font-family: "Iceland", cursive;
@@ -520,10 +541,22 @@ footer a img {
   height: 500px;
   border: 1px solid white;
   border-radius: 20px;
+  animation: rotacion 3s;
 }
 .containerProductosDetalle .containerImagenDetalle img {
   object-fit: cover;
   width: 400px;
+}
+@keyframes rotacion {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
 }
 .containerProductosDetalle .containerDetalle {
   width: 400px;
@@ -547,10 +580,31 @@ footer a img {
   background-color: black;
   border: 1px solid #FEA800;
   border-radius: 10px;
+  animation: vibrar 4s;
 }
 .containerProductosDetalle .containerDetalle .botonesDetalle .btnComprar a {
   text-decoration: none;
   color: #DA059E;
+}
+@keyframes vibrar {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 .containerProductosDetalle .containerDetalle .botonesDetalle .btnVolver {
   width: 100px;
