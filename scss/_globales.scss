@@ -8,6 +8,11 @@ body{
   width: 100%;
   height: 120px;
   border-bottom: solid 2px $borde-azulOscuro;
+  position: sticky;
+  top: 0;
+  background-color: $color-primario;
+  opacity: 1;
+  z-index: 3;
   .menu{
     width: 80px;
     height: 80px;
