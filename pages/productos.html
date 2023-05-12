@@ -77,88 +77,123 @@
         </ul>
       </nav>
     </div>
-    <div class="containerDeportes">
-      <input type="button" value="Todos" class="todos" />
-      <input type="button" value="Futbol" class="futbol" />
-      <input type="button" value="Boxeo" class="boxeo" />
-      <input type="button" value="Tennis" class="tennis" />
-      <input type="button" value="Beisbol" class="beisbol" />
-    </div>
-    <div class="containerProductos">
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/adidasX-removebg-preview.png" alt="" />
-        </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
+    <div class="filtro">
+      <input
+        type="radio"
+        id="Todos"
+        name="seleccionado"
+        class="filtroOpcion"
+        checked
+      />
+      <input
+        type="radio"
+        id="Futbol"
+        name="seleccionado"
+        class="filtroOpcion"
+      />
+      <input type="radio" id="Boxeo" name="seleccionado" class="filtroOpcion" />
+      <input
+        type="radio"
+        id="Tennis"
+        name="seleccionado"
+        class="filtroOpcion"
+      />
+      <input
+        type="radio"
+        id="Beisbol"
+        name="seleccionado"
+        class="filtroOpcion"
+      />
+
+      <div class="containerOpciones">
+        <label for="Todos" class="todos">Todos</label>
+        <label for="Futbol" class="futbol">Futbol</label>
+        <label for="Boxeo" class="boxeo">Boxeo</label>
+        <label for="Tennis" class="tennis">Tennis</label>
+        <label for="Beisbol" class="beisbol">Beisbol</label>
       </div>
-      <div class="containerTarjeta">
-        <div>
-          <img
-            src="../assets/img/camisetaCountry-removebg-preview.png"
-            alt=""
-          />
+      <div class="containerProductos">
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img src="../assets/img/adidasX-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/guantes-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img
+              src="../assets/img/camisetaCountry-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/saco-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Boxeo">
+          <div>
+            <img src="../assets/img/guantes-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/nikeTiempo-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Boxeo">
+          <div>
+            <img src="../assets/img/saco-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/raqueta-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img src="../assets/img/nikeTiempo-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/pelotas-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Tennis">
+          <div>
+            <img src="../assets/img/raqueta-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/bate-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Tennis">
+          <div>
+            <img src="../assets/img/pelotas-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/guayosNikeAir-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Beisbol">
+          <div>
+            <img src="../assets/img/bate-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/guanteBeisbol-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img
+              src="../assets/img/guayosNikeAir-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/millonarios-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Beisbol">
+          <div>
+            <img
+              src="../assets/img/guanteBeisbol-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
-      </div>
-      <div class="containerTarjeta">
-        <div>
-          <img src="../assets/img/cruzAzul-removebg-preview.png" alt="" />
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img src="../assets/img/millonarios-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
         </div>
-        <button class="detalle"><a href="./detalle.html">Detalle</a></button>
+        <div class="containerTarjeta Futbol">
+          <div>
+            <img src="../assets/img/cruzAzul-removebg-preview.png" alt="" />
+          </div>
+          <button class="detalle"><a href="./detalle.html">Detalle</a></button>
+        </div>
       </div>
     </div>
     <footer>

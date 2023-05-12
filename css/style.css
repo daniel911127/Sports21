@@ -8,6 +8,8 @@
 body {
   font-family: "Iceland", cursive;
   background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
 /* header */
@@ -129,6 +131,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   border-top: solid 2px #0601FF;
+  background: black;
 }
 footer p {
   color: #726B6B;
@@ -198,8 +201,8 @@ footer a img {
   color: #00C1FE;
   position: absolute;
   font-weight: bold;
-  margin-top: 35px;
-  margin-left: 18px;
+  margin-top: 30px;
+  margin-left: 25px;
   font-size: 40px;
   z-index: 1;
 }
@@ -221,7 +224,7 @@ footer a img {
   color: #DA059E;
   position: absolute;
   font-weight: bold;
-  margin-top: 35px;
+  margin-top: 485px;
   margin-right: 18px;
   font-size: 40px;
 }
@@ -312,6 +315,9 @@ footer a img {
     height: 300px;
     width: 300px;
   }
+  .containerPropaganda .tituloNovedades {
+    margin-top: 302px;
+  }
   .containerPropaganda .tituloNovedades, .containerPropaganda .tituloProductoMes {
     font-size: 30px;
   }
@@ -369,6 +375,8 @@ footer a img {
   }
   .containerPropaganda .tituloNovedades {
     position: relative;
+    margin-top: 40px;
+    margin-left: 30px;
   }
   .containerPropaganda .productoMes img {
     border-radius: 50px;
@@ -380,51 +388,72 @@ footer a img {
     flex-wrap: wrap;
   }
 }
-.containerDeportes {
+.filtro {
+  margin: 20px 0;
+}
+.filtro input {
+  display: none;
+}
+.filtro .containerOpciones {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
-.containerDeportes input {
-  margin: 20px;
-  width: 60px;
+.filtro .containerOpciones .todos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DA059E;
+}
+.filtro .containerOpciones .futbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FEA800;
+}
+.filtro .containerOpciones .boxeo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00C1FE;
+}
+.filtro .containerOpciones .tennis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FBF100;
+}
+.filtro .containerOpciones .beisbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00FD28;
+}
+.filtro .containerOpciones label {
   font-family: "Iceland", cursive;
   background-color: black;
   color: white;
   border-radius: 20px;
+  height: 25px;
+  width: 60px;
   transition: all 1s;
 }
-.containerDeportes input:hover {
+.filtro .containerOpciones label:hover {
   cursor: pointer;
   color: black;
   border: black;
   background-image: linear-gradient(to left, #00C1FE, #00FD28);
 }
-.containerDeportes .todos {
-  border: 1px solid #DA059E;
-}
-.containerDeportes .futbol {
-  border: 1px solid #FEA800;
-}
-.containerDeportes .boxeo {
-  border: 1px solid #00C1FE;
-}
-.containerDeportes .tennis {
-  border: 1px solid #FBF100;
-}
-.containerDeportes .beisbol {
-  border: 1px solid #00FD28;
-}
-
-.containerProductos {
+.filtro .containerProductos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
 }
-.containerProductos .containerTarjeta {
+.filtro .containerProductos .Futbol, .filtro .containerProductos .Beisbol, .filtro .containerProductos .Tennis, .filtro .containerProductos .Boxeo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -435,16 +464,16 @@ footer a img {
   margin: 20px;
   background-color: RGB(114, 107, 107, 0.5);
 }
-.containerProductos .containerTarjeta img {
+.filtro .containerProductos .Futbol img, .filtro .containerProductos .Beisbol img, .filtro .containerProductos .Tennis img, .filtro .containerProductos .Boxeo img {
   height: 100%;
   width: 180px;
   object-fit: cover;
   transition: all 1s;
 }
-.containerProductos .containerTarjeta img:hover {
+.filtro .containerProductos .Futbol img:hover, .filtro .containerProductos .Beisbol img:hover, .filtro .containerProductos .Tennis img:hover, .filtro .containerProductos .Boxeo img:hover {
   transform: scale(1.1, 1.1);
 }
-.containerProductos .containerTarjeta .detalle {
+.filtro .containerProductos .Futbol .detalle, .filtro .containerProductos .Beisbol .detalle, .filtro .containerProductos .Tennis .detalle, .filtro .containerProductos .Boxeo .detalle {
   font-family: "Iceland", cursive;
   width: 50%;
   margin-left: 50px;
@@ -455,9 +484,27 @@ footer a img {
   font-size: 25px;
   border-radius: 10px;
 }
-.containerProductos .containerTarjeta .detalle a {
+.filtro .containerProductos .Futbol .detalle a, .filtro .containerProductos .Beisbol .detalle a, .filtro .containerProductos .Tennis .detalle a, .filtro .containerProductos .Boxeo .detalle a {
   text-decoration: none;
   color: white;
+}
+.filtro .containerProductos .Futbol, .filtro .containerProductos .Beisbol, .filtro .containerProductos .Tennis, .filtro .containerProductos .Boxeo {
+  display: none;
+}
+.filtro #Todos:checked ~ .containerProductos > .Futbol, .filtro #Todos:checked ~ .containerProductos .Beisbol, .filtro #Todos:checked ~ .containerProductos .Tennis, .filtro #Todos:checked ~ .containerProductos .Boxeo {
+  display: flex;
+}
+.filtro #Futbol:checked ~ .containerProductos > .Futbol {
+  display: flex;
+}
+.filtro #Boxeo:checked ~ .containerProductos > .Boxeo {
+  display: flex;
+}
+.filtro #Tennis:checked ~ .containerProductos > .Tennis {
+  display: flex;
+}
+.filtro #Beisbol:checked ~ .containerProductos > .Beisbol {
+  display: flex;
 }
 
 @media (max-width: 660px) {
@@ -574,6 +621,7 @@ footer a img {
   color: white;
   font-size: 35px;
   padding: 10px;
+  text-align: center;
 }
 .containerProductosDetalle .containerDetalle .botonesDetalle {
   display: flex;
