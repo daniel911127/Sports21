@@ -8,6 +8,7 @@
 body {
   font-family: "Iceland", cursive;
   background-color: black;
+  height: 100vh;
 }
 
 /* header */
@@ -183,8 +184,6 @@ footer a img {
 }
 .containerPropaganda {
   display: flex;
-  height: 100%;
-  position: absolut;
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -193,7 +192,7 @@ footer a img {
 }
 .containerPropaganda div img {
   margin-top: 30px;
-  height: 500px;
+  height: 400px;
 }
 .containerPropaganda .tituloProductoMes {
   color: #00C1FE;
@@ -222,7 +221,7 @@ footer a img {
   color: #DA059E;
   position: absolute;
   font-weight: bold;
-  margin-top: 485px;
+  margin-top: 390px;
   margin-right: 18px;
   font-size: 40px;
 }
