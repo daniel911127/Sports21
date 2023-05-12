@@ -1,6 +1,8 @@
 body{
   font-family: $fuente-principal;
   background-color: $color-primario;
+  height: 100%;
+  width: 100%
 }
 /* header */
 .header{
@@ -118,7 +120,8 @@ footer{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border-top: solid 2px $borde-azulOscuro;
+  border-top: solid 2px $borde-azulOscuro; 
+  background: $color-primario;
   p{
     color:$color-footer;
   }

@@ -1,70 +1,110 @@
-.containerDeportes{
-  @include flex-container-productos;
+.filtro{
+  margin: 20px 0;
   input{
+    display: none
+  }
+  
+  .containerOpciones{    
+    @include flex-container-productos;
+    gap:20px;
+    .todos{
+      @include label-opciones;
+      border: 1px solid $color-rosado;   
+    }
+    .futbol{   
+      @include label-opciones;
+      border: 1px solid $color-naranja;
+    }
+    .boxeo{
+      @include label-opciones;
+      border: 1px solid $color-azulClaro;  
+    }
+    .tennis{
+      @include label-opciones;
+      border: 1px solid $color-amarillo;
+      
+    }
+    .beisbol{
+      @include label-opciones;
+      border: 1px solid $color-verde;   
+    }
+    label{
+      @include botones-filtros;
+      transition:all 1s;
+    }
+    label:hover{
+      cursor: pointer;
+      color: $color-primario;
+      border: $color-primario;
+      background-image:linear-gradient(to left,$color-azulClaro,$color-verde) ;
+    }
+    
+  }
+  .containerProductos{
+    @include flex-container-productos;
     margin: 20px;
-    width: 60px;
-    @include botones-filtros;
-    transition:all 1s;
-  }
-  input:hover{
-    cursor: pointer;
-    color: $color-primario;
-    border: $color-primario;
-    background-image:linear-gradient(to left,$color-azulClaro,$color-verde) ;
-  }
-  .todos{
-    border: 1px solid $color-rosado;
-  }
-  .futbol{
-    border: 1px solid $color-naranja;
-  }
-  .boxeo{
-    border: 1px solid $color-azulClaro;
-  }
-  .tennis{
-    border: 1px solid $color-amarillo;
-  }
-  .beisbol{
-    border: 1px solid $color-verde;
-  }
-}
-.containerProductos{
-  @include flex-container-productos;
-  margin: 20px;
-  .containerTarjeta{
-    @include flex-container-tarjeta;
-    height: 270px;
-    width: 180px;
-    border: 1px solid $color-blanco;
-    border-radius: 25px;
-    margin: 20px;
-    background-color:RGB(114, 107, 107,0.5); 
-    img{
-      height:100%;
+    
+    .Futbol, .Beisbol, .Tennis, .Boxeo{
+      @include flex-container-tarjeta;
+      height: 270px;
       width: 180px;
-      object-fit: cover;
-      transition: all 1s;
-      &:hover{
-        transform: scale(1.1,1.1);
-      }
-    }
-    .detalle{
-      font-family: $fuente-principal;
-      width: 50%;
-      margin-left:50px;
-      margin-bottom: 30px;
-      background-color: $color-primario;
-      color: $color-blanco;
       border: 1px solid $color-blanco;
-      font-size: 25px;
-      border-radius: 10px;
-      a{
-        text-decoration: none;
-        color: $color-blanco;
+      border-radius: 25px;
+      margin: 20px;
+      background-color:RGB(114, 107, 107,0.5); 
+      img{
+        height:100%;
+        width: 180px;
+        object-fit: cover;
+        transition: all 1s;
+        &:hover{
+          transform: scale(1.1,1.1);
+        }
       }
+      .detalle{
+        font-family: $fuente-principal;
+        width: 50%;
+        margin-left:50px;
+        margin-bottom: 30px;
+        background-color: $color-primario;
+        color: $color-blanco;
+        border: 1px solid $color-blanco;
+        font-size: 25px;
+        border-radius: 10px;
+        a{
+          text-decoration: none;
+          color: $color-blanco;
+        }
+      }
+    } 
+    .Futbol, .Beisbol, .Tennis, .Boxeo{
+      display: none;
     }
+    
+  }
+  #Todos:checked ~ .containerProductos{ > .Futbol, .Beisbol, .Tennis, .Boxeo{
+    display: flex;
   }
 }
+  #Futbol:checked ~ .containerProductos{ > .Futbol{
+        display: flex;
+      }
+    }
+    #Boxeo:checked ~ .containerProductos{ > .Boxeo{
+      display: flex;
+    }
+  }
+  #Tennis:checked ~ .containerProductos{ > .Tennis{
+    display: flex;
+  }
+}
+#Beisbol:checked ~ .containerProductos{ > .Beisbol{
+  display: flex;
+}
+}
+  }
+
+
 @media(max-width:$movil){
   .containerProductos{
     .containerTarjeta{
