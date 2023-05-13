@@ -387,7 +387,6 @@ footer a img {
 }
 .filtro {
   margin: 20px 0;
-  height: 100%;
 }
 .filtro input {
   display: none;
@@ -450,6 +449,9 @@ footer a img {
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
+}
+.filtro .containerProductos .balon div img {
+  margin-bottom: 50px;
 }
 .filtro .containerProductos .Futbol, .filtro .containerProductos .Beisbol, .filtro .containerProductos .Tennis, .filtro .containerProductos .Boxeo {
   display: flex;

@@ -1,6 +1,5 @@
 .filtro{
   margin: 20px 0;
-  height: 100%;
   input{
     display: none
   }
@@ -44,6 +43,9 @@
   .containerProductos{
     @include flex-container-productos;
     margin: 20px;
+    .balon div img{
+      margin-bottom: 50px;
+    }    
     
     .Futbol, .Beisbol, .Tennis, .Boxeo{
       @include flex-container-tarjeta;
@@ -62,6 +64,7 @@
           transform: scale(1.1,1.1);
         }
       }
+      
       .detalle{
         font-family: $fuente-principal;
         width: 50%;
@@ -77,12 +80,15 @@
           color: $color-blanco;
         }
       }
+      
     } 
+    
     .Futbol, .Beisbol, .Tennis, .Boxeo{
       display: none;
     }
     
   }
+  
   #Todos:checked ~ .containerProductos{ > .Futbol, .Beisbol, .Tennis, .Boxeo{
     display: flex;
   }
@@ -104,7 +110,9 @@
 }
 }
   }
-
+  .casco {
+    margin-bottom: 50px;
+  }
 
 @media(max-width:$movil){
   .containerProductos{
