@@ -8,7 +8,7 @@
 body {
   font-family: "Iceland", cursive;
   background-color: black;
-  /*height: 100vh;*/
+  height: 100%;
 }
 
 /* header */
@@ -505,6 +505,10 @@ footer a img {
 }
 .filtro #Beisbol:checked ~ .containerProductos > .Beisbol {
   display: flex;
+}
+
+.casco {
+  margin-bottom: 50px;
 }
 
 @media (max-width: 660px) {
